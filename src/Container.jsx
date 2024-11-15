@@ -5,9 +5,9 @@ import Stats from './Stats'
 const Container = () => {
 
   const [text, setText] = useState("")
-  const  numberOfCharacters = text.length;
-  const numberOfWords= text.split(/\s/).filter((word) => word !== "").length;
   const instagramCharacters = 280 - text.length;
+  const numberOfCharacters = text.length;
+  const numberOfWords= text.split(/\s/).filter((word) => word !== "").length;
   const facebookCharacters = 2200 - text.length;
   
   return (
