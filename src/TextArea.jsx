@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 
-function TextArea() {
-
-    const [text,setText] = useState('')
-    const [numberOfCharacters,setNumberOfCharacters] = useState(0)
+function TextArea({text,setText}) {
 
     const handleChange = (e) => {
         const controlText = e.target.value

@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TextArea from './TextArea'
 import Stats from './Stats'
 
 const Container = () => {
+
+  const [text, setText] = useState("")
+  const  numberOfCharacters = text.length;
+  const numberOfWords= text.split(/\s/).filter((word) => word !== "").length;
+  const instagramCharacters = 280 - text.length;
+  const facebookCharacters = 2200 - text.length;
+  
   return (
     <main className='container'>
-      <TextArea />
-      <Stats />
+      <TextArea text={text} setText={setText} />
+      <Stats numberOfCharacters={numberOfCharacters} instagramCharacters={instagramCharacters} facebookCharacters={facebookCharacters} numberOfWords={numberOfWords} />
     </main>
   )
 }
